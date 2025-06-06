@@ -8,13 +8,14 @@ class PropertyBot:
         self.scraper = PropertyScraper()
         self.n = 0
 
-
+    # Beautiful Soup Operation
     def run_scraping(self):
         self.scraper.scrape_data()
         print("ADDRESS LIST: ", self.scraper.address_list[0])
         # print(self.scraper.price_list)
         # print(self.scraper.url_list)
 
+    # Selenium Operation
     def run_auto_filler(self):
         auto_filler = FormAutoFiller(
             address=self.scraper.address_list,
